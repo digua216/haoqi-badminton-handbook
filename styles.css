@@ -71,7 +71,7 @@ svg {
   height: 100dvh;
   min-height: 0;
   margin: 0 auto;
-  padding: 10px 10px calc(var(--nav-height) + 14px + env(safe-area-inset-bottom));
+  padding: max(18px, env(safe-area-inset-top)) 10px calc(var(--nav-height) + 14px + env(safe-area-inset-bottom));
   background:
     radial-gradient(circle at 92% 4%, var(--sun) 0 38px, transparent 39px),
     linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
@@ -87,31 +87,6 @@ svg {
 .phone-shell::-webkit-scrollbar {
   width: 0;
   height: 0;
-}
-
-.phone-shell::before,
-.phone-shell::after {
-  content: "";
-  position: fixed;
-  left: 50%;
-  width: min(390px, calc(100vw - 36px));
-  height: 58px;
-  transform: translateX(-50%);
-  background: var(--cloud);
-  border: 5px solid var(--ink);
-  border-radius: 50px;
-  z-index: -1;
-  opacity: 0.72;
-}
-
-.phone-shell::before {
-  top: 74px;
-  margin-left: -92px;
-}
-
-.phone-shell::after {
-  bottom: 90px;
-  margin-left: 86px;
 }
 
 .view {

@@ -1,0 +1,25 @@
+{
+  "name": "好奇的羽毛球手册",
+  "short_name": "好奇的羽毛球手册",
+  "description": "给好奇的毕业羽毛球纪念小应用。",
+  "start_url": "./index.html#home",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#9fdcff",
+  "theme_color": "#9fdcff",
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

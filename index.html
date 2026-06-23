@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#9fdcff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="好奇的羽毛球手册" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>好奇的羽毛球手册</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32.png" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
+  </head>
+  <body>
+    <main class="phone-shell" aria-label="好奇的羽毛球手册">
+      <section class="view view-home is-active" id="view-home" data-view="home">
+        <header class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">毕业纪念版</p>
+            <h1>好奇的羽毛球手册</h1>
+            <p class="hero-line">把每一局、每一支拍、每一次出发都收好。</p>
+          </div>
+
+          <div class="sky-sticker" aria-hidden="true">
+            <svg class="sun-dog" viewBox="0 0 220 180" role="img" aria-label="打羽毛球的小白狗贴纸">
+              <defs>
+                <filter id="roughShadow" x="-10%" y="-10%" width="120%" height="130%">
+                  <feDropShadow dx="0" dy="5" stdDeviation="0" flood-color="#171514" flood-opacity="0.22" />
+                </filter>
+              </defs>
+              <path d="M162 2l12 19 20-8-5 22 23 6-20 12 11 19-23-4-10 21-8-22-23 4 13-19-20-11 23-6-6-22z" fill="#fff266" stroke="#171514" stroke-width="6" stroke-linejoin="round" />
+              <circle cx="169" cy="43" r="4" fill="#171514" />
+              <circle cx="188" cy="43" r="4" fill="#171514" />
+              <path d="M171 57c7 6 14 5 20-1" fill="none" stroke="#171514" stroke-width="5" stroke-linecap="round" />
+              <path d="M18 78c4-15 19-23 35-16 8-18 32-22 47-7 12-11 32-8 40 7 14-5 30 0 38 12 16-1 26 8 24 23H13c-7-10-3-19 5-19z" fill="#fff" stroke="#171514" stroke-width="6" stroke-linejoin="round" />
+              <g filter="url(#roughShadow)">
+                <path d="M157 108c13 0 23 8 26 20 4 15-6 28-22 29-14 1-25-7-28-20-4-16 7-29 24-29z" fill="#fffdf3" stroke="#171514" stroke-width="6" />
+                <path d="M146 112l26 34M159 108l10 39M179 122l-35 17" fill="none" stroke="#171514" stroke-width="3" stroke-linecap="round" />
+                <path d="M81 121c-31 0-55 18-55 42h116c0-24-25-42-61-42z" fill="#fffefa" stroke="#171514" stroke-width="8" stroke-linejoin="round" />
+                <path d="M52 140c-10 4-17 12-19 23h36c1-13-5-21-17-23z" fill="#fffefa" stroke="#171514" stroke-width="7" stroke-linejoin="round" />
+                <path d="M112 140c10 4 18 12 20 23H95c0-13 7-21 17-23z" fill="#fffefa" stroke="#171514" stroke-width="7" stroke-linejoin="round" />
+                <path d="M47 82c-16-19-11-37 12-51 16 9 23 25 20 45z" fill="#fffefa" stroke="#171514" stroke-width="8" stroke-linejoin="round" />
+                <path d="M101 77c9-21 25-32 48-31 6 21-4 38-28 50z" fill="#fffefa" stroke="#171514" stroke-width="8" stroke-linejoin="round" />
+                <path d="M59 44c6 8 8 17 6 28M134 56c-7 6-12 14-14 24" fill="none" stroke="#ffb9a6" stroke-width="5" stroke-linecap="round" />
+                <path d="M85 70c-31 0-54 21-54 49 0 31 23 51 56 51s58-21 58-51c0-28-24-49-55-49z" fill="#fffefa" stroke="#171514" stroke-width="8" stroke-linejoin="round" />
+                <circle cx="68" cy="107" r="5" fill="#171514" />
+                <circle cx="111" cy="107" r="5" fill="#171514" />
+                <ellipse cx="90" cy="127" rx="20" ry="14" fill="#fff6dd" stroke="#171514" stroke-width="5" />
+                <ellipse cx="90" cy="119" rx="9" ry="6" fill="#171514" />
+                <path d="M90 126v8M90 134c-7 5-14 4-18-2M90 134c7 5 15 4 19-2" fill="none" stroke="#171514" stroke-width="4" stroke-linecap="round" />
+                <circle cx="54" cy="123" r="5" fill="#ffb9a6" />
+                <circle cx="126" cy="123" r="5" fill="#ffb9a6" />
+                <path d="M67 151c-3 8-10 12-20 10M112 151c4 8 12 12 22 9" fill="none" stroke="#171514" stroke-width="6" stroke-linecap="round" />
+              </g>
+            </svg>
+          </div>
+        </header>
+
+        <section class="stats-grid" aria-label="手册概览">
+          <article class="stat-card">
+            <span class="stat-label">本月对局</span>
+            <strong id="home-month-count">0</strong>
+            <span class="stat-note">场</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">胜率</span>
+            <strong id="home-win-rate">0%</strong>
+            <span class="stat-note">已记录</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">装备资产</span>
+            <strong id="home-gear-value">¥0</strong>
+            <span class="stat-note">粗略估算</span>
+          </article>
+        </section>
+
+        <section class="panel home-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">最近一局</p>
+              <h2 id="home-latest-title">还没有记录</h2>
+            </div>
+            <button class="icon-button" type="button" data-go="matches" aria-label="去记录对局">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4v3M17 4v3M4.5 9h15M6 5.5h12A2.5 2.5 0 0 1 20.5 8v10A2.5 2.5 0 0 1 18 20.5H6A2.5 2.5 0 0 1 3.5 18V8A2.5 2.5 0 0 1 6 5.5z" />
+              </svg>
+            </button>
+          </div>
+          <p class="soft-text" id="home-latest-detail">点下面的“记一场”，把第一场毕业后的球记下来。</p>
+        </section>
+
+        <section class="quick-actions" aria-label="快捷操作">
+          <button class="action-button watermelon" type="button" data-go="matches">
+            <span class="button-mark">+</span>
+            记一场
+          </button>
+          <button class="action-button sky" type="button" data-go="sim">
+            <span class="button-mark">↗</span>
+            模拟单打
+          </button>
+          <button class="action-button lemon" type="button" data-go="gear">
+            <span class="button-mark">◇</span>
+            添装备
+          </button>
+        </section>
+
+        <section class="panel friend-board-card" aria-labelledby="friend-board-card-title">
+          <button class="friend-board-open" type="button" id="open-friend-board" aria-label="打开朋友留言版">
+            <strong id="friend-board-card-title">朋友留言版</strong>
+          </button>
+        </section>
+      </section>
+
+      <section class="view" id="view-sim" data-view="sim">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">实时单打</p>
+            <h1>拖动接住羽毛球</h1>
+          </div>
+          <span class="sticker-badge">11 分决胜</span>
+        </header>
+
+        <section class="score-board" aria-label="比分">
+          <div id="player-score-card">
+            <span>好奇</span>
+            <strong id="player-score">0</strong>
+          </div>
+          <div class="score-divider">:</div>
+          <div id="opponent-score-card">
+            <span>对手</span>
+            <strong id="opponent-score">0</strong>
+          </div>
+        </section>
+
+        <section class="game-toolbar" aria-label="游戏控制">
+          <div class="difficulty-control" role="group" aria-label="电脑难度">
+            <button class="is-active" type="button" data-difficulty="easy">低</button>
+            <button type="button" data-difficulty="medium">中</button>
+            <button type="button" data-difficulty="hard">高</button>
+          </div>
+          <div class="game-actions">
+            <button class="submit-button" type="button" id="game-start">开始</button>
+            <button class="clear-filter-button" type="button" id="game-reset">重开</button>
+            <button class="clear-filter-button" type="button" data-go="home">退出</button>
+          </div>
+        </section>
+
+        <section class="court-panel game-live" aria-label="单打游戏球场">
+          <svg id="court-svg" viewBox="0 0 360 520" role="img" aria-label="羽毛球单打模拟">
+            <rect x="35" y="28" width="290" height="464" rx="8" class="court-bg" />
+            <rect x="55" y="48" width="250" height="424" rx="4" class="court-line-fill" />
+            <rect id="serve-zone-server" class="serve-zone server-zone" x="0" y="0" width="1" height="1" rx="5" />
+            <rect id="serve-zone-receiver" class="serve-zone receiver-zone" x="0" y="0" width="1" height="1" rx="5" />
+            <path d="M55 48h250v424H55z" class="court-line outer-line" />
+            <path d="M82 48v424M278 48v424" class="court-line singles-line" />
+            <path d="M55 80h250M55 440h250" class="court-line doubles-service-line" />
+            <path d="M55 192h250M55 328h250" class="court-line short-service-line" />
+            <path d="M180 48v144M180 328v144" class="court-line center-service-line" />
+            <path d="M48 260h264" class="net-line" />
+            <rect x="82" y="260" width="196" height="212" rx="8" class="player-zone" />
+            <ellipse id="landing-shadow" class="landing-shadow" cx="180" cy="410" rx="20" ry="8" />
+            <circle id="player-hit-ring" class="hit-ring player-hit-ring" cx="180" cy="395" r="28" />
+            <circle id="opponent-hit-ring" class="hit-ring opponent-hit-ring" cx="180" cy="126" r="24" />
+            <g id="opponent-stick" class="stick-player opponent">
+              <circle class="stick-head" cx="180" cy="105" r="18" />
+              <path class="stick-body" d="M180 123v42M180 144l-28 22M180 144l29 20M180 165l-25 32M180 165l25 32" />
+              <path class="racket" d="M209 163l23 18M232 181c10-9 22-9 28 0s3 22-7 29-23 5-28-4-3-18 7-25z" />
+            </g>
+            <g id="player-stick" class="stick-player player">
+              <circle class="stick-head" cx="180" cy="415" r="18" />
+              <path class="stick-body" d="M180 433v42M180 454l-31-18M180 454l30-17M180 475l-26 31M180 475l25 31" />
+              <path class="racket racket-left" d="M149 436l-23-28M126 408c-13 2-23-5-25-17s6-23 19-25 24 5 26 17-7 23-20 25z" />
+              <path class="racket racket-right" d="M211 436l23-28M234 408c13 2 23-5 25-17s-6-23-19-25-24 5-26 17 7 23 20 25z" />
+            </g>
+            <g id="shuttle" class="shuttle">
+              <path d="M0 0l19 13M0 0l8 22M0 0l24 1" />
+              <ellipse cx="-2" cy="-2" rx="7" ry="5" />
+            </g>
+          </svg>
+          <div class="rally-caption">
+            <strong id="rally-title">准备开始</strong>
+            <span id="rally-note">按开始后，用手指拖动下半场的好奇，接住飞来的球。</span>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" id="view-matches" data-view="matches">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">对局记录</p>
+            <h1>今天打得怎么样</h1>
+          </div>
+          <span class="sticker-badge">日历小圆点</span>
+        </header>
+
+        <form class="form-panel collapsible-form is-collapsed" id="match-form">
+          <div class="form-title">
+            <h2>记一场</h2>
+            <span>手动记录</span>
+            <button class="form-toggle-button" type="button" id="match-form-toggle" aria-expanded="false" aria-controls="match-form-body">展开</button>
+          </div>
+          <div class="collapsible-form-body" id="match-form-body">
+            <label>
+              日期
+              <input type="date" name="date" required />
+            </label>
+            <div class="two-col">
+              <label>
+                开始
+                <input type="text" name="startTime" inputmode="numeric" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="19:00" />
+              </label>
+              <label>
+                结束
+                <input type="text" name="endTime" inputmode="numeric" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="20:30" />
+              </label>
+            </div>
+            <div class="two-col">
+              <label>
+                类型
+                <select name="type" id="match-type">
+                  <option value="singles">单打</option>
+                  <option value="doubles">双打</option>
+                  <option value="practice">练球</option>
+                </select>
+              </label>
+              <label>
+                结果
+                <select name="result">
+                  <option value="win">胜</option>
+                  <option value="loss">负</option>
+                  <option value="practice">不计胜负</option>
+                </select>
+              </label>
+            </div>
+            <label data-participant-mode="single">
+              <span id="single-participant-label">对手</span>
+              <input type="text" name="opponent" placeholder="比如 好香г" />
+            </label>
+            <div class="participant-grid" data-participant-mode="doubles" hidden>
+              <label>
+                队友
+                <input type="text" name="teammate" placeholder="比如 狗姐" />
+              </label>
+              <label>
+                对手 1
+                <input type="text" name="opponentOne" placeholder="比如 导" />
+              </label>
+              <label>
+                对手 2
+                <input type="text" name="opponentTwo" placeholder="比如 小导演" />
+              </label>
+            </div>
+            <label>
+              场地
+              <input type="text" name="venue" placeholder="比如 学校体育馆" />
+            </label>
+            <div class="two-col">
+              <label>
+                比分
+                <input type="text" name="scores" placeholder="21-18, 21-15" />
+              </label>
+              <label>
+                用球数
+                <input type="number" name="shuttleCount" min="0" step="1" placeholder="2" />
+              </label>
+            </div>
+            <label>
+              体感评分
+              <input type="range" name="rating" min="1" max="5" value="4" />
+            </label>
+            <label>
+              备注
+              <textarea name="notes" rows="2" placeholder="今天最漂亮的一拍是什么？"></textarea>
+            </label>
+            <button class="submit-button" type="submit">存进手册</button>
+          </div>
+        </form>
+
+        <section class="calendar-panel">
+          <div class="calendar-head">
+            <button class="icon-button" type="button" id="prev-month" aria-label="上个月">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+            </button>
+            <h2 id="calendar-title">2026 年 6 月</h2>
+            <button class="icon-button" type="button" id="next-month" aria-label="下个月">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+          <div class="week-row" aria-hidden="true">
+            <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+          </div>
+          <div class="calendar-grid" id="calendar-grid" aria-label="对局日历"></div>
+        </section>
+
+        <section class="filter-panel">
+          <label>
+            搜索
+            <input type="search" id="match-search" placeholder="搜对手、场地、比分、备注" />
+          </label>
+          <label>
+            筛选
+            <select id="match-filter">
+              <option value="all">全部</option>
+              <option value="win">只看胜</option>
+              <option value="loss">只看负</option>
+              <option value="practice">练球</option>
+            </select>
+          </label>
+          <button class="clear-filter-button" type="button" id="clear-date">看全部日期</button>
+        </section>
+
+        <section class="list-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">历史</p>
+              <h2 id="match-list-title">全部记录</h2>
+            </div>
+          </div>
+          <div id="match-list" class="item-list"></div>
+        </section>
+      </section>
+
+      <section class="view" id="view-gear" data-view="gear">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">资产统计</p>
+            <h1>好奇的装备柜</h1>
+          </div>
+          <span class="sticker-badge">拍子也有名字</span>
+        </header>
+
+        <section class="gear-summary">
+          <article>
+            <span>总资产</span>
+            <strong id="gear-total-value">¥0</strong>
+          </article>
+          <article>
+            <span>装备数</span>
+            <strong id="gear-total-count">0</strong>
+          </article>
+          <article>
+            <span>可用中</span>
+            <strong id="gear-active-count">0</strong>
+          </article>
+        </section>
+
+        <form class="form-panel collapsible-form is-collapsed" id="gear-form">
+          <div class="form-title">
+            <h2 id="gear-form-title">添装备</h2>
+            <span id="gear-form-mode">球拍、球、衣服、包</span>
+            <button class="form-toggle-button" type="button" id="gear-form-toggle" aria-expanded="false" aria-controls="gear-form-body">展开</button>
+          </div>
+          <div class="collapsible-form-body" id="gear-form-body">
+            <div class="two-col">
+              <label>
+                分类
+                <select name="category" id="gear-category">
+                  <option value="racket">球拍</option>
+                  <option value="shuttle">羽毛球</option>
+                  <option value="shoes">球鞋</option>
+                  <option value="clothes">衣服</option>
+                  <option value="bag">包</option>
+                  <option value="accessory">配件</option>
+                  <option value="other">其他</option>
+                </select>
+              </label>
+              <label>
+                状态
+                <select name="status" id="gear-status"></select>
+              </label>
+            </div>
+            <label>
+              品牌
+              <input type="text" name="brand" placeholder="比如 YONEX / VICTOR" />
+            </label>
+            <label>
+              名称 / 型号
+              <input type="text" name="name" required placeholder="比如 天斧 88D" />
+            </label>
+            <label>
+              昵称
+              <input type="text" name="nickname" placeholder="比如 幸运拍 / 毕业战袍" />
+            </label>
+            <div class="two-col">
+              <label>
+                购买日期
+                <input type="date" name="purchaseDate" />
+              </label>
+              <label>
+                价格
+                <input type="number" name="price" min="0" step="0.01" placeholder="699" />
+              </label>
+            </div>
+            <label class="photo-upload">
+              装备照片
+              <input type="file" name="photo" id="gear-photo" accept="image/*" />
+              <span class="photo-preview" id="gear-photo-preview">
+                <span>点这里选择照片</span>
+              </span>
+            </label>
+            <button class="clear-filter-button photo-clear-button" type="button" id="gear-photo-clear" hidden>清除照片</button>
+            <label>
+              备注
+              <textarea name="notes" rows="2" placeholder="手感、穿线、购买故事都可以写。"></textarea>
+            </label>
+            <button class="submit-button" type="submit" id="gear-submit">放进装备柜</button>
+            <button class="clear-filter-button edit-cancel-button" type="button" id="gear-edit-cancel" hidden>取消修改</button>
+          </div>
+        </form>
+
+        <section class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">分类占比</p>
+              <h2>钱都花到哪了</h2>
+            </div>
+          </div>
+          <div id="gear-bars" class="bar-list"></div>
+        </section>
+
+        <section class="list-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">清单</p>
+              <h2>装备列表</h2>
+            </div>
+          </div>
+          <div id="gear-list" class="item-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="底部导航">
+      <button class="is-active" type="button" data-nav="home" aria-label="首页">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z" /></svg>
+        <span>首页</span>
+      </button>
+      <button type="button" data-nav="sim" aria-label="模拟">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 19c4-5 8-9 12-14M15 5h4v4M5 5c4 3 8 7 12 14" /></svg>
+        <span>模拟</span>
+      </button>
+      <button type="button" data-nav="matches" aria-label="记录">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v3M17 4v3M4 9h16M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" /></svg>
+        <span>记录</span>
+      </button>
+      <button type="button" data-nav="gear" aria-label="装备">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8V6a4 4 0 0 1 8 0v2M5 8h14l-1 12H6zM9 13h6" /></svg>
+        <span>装备</span>
+      </button>
+    </nav>
+
+    <div class="friend-board-modal" id="friend-board-modal" hidden>
+      <div class="friend-board-backdrop" data-close-friend-board></div>
+      <section class="friend-board-dialog" role="dialog" aria-modal="true" aria-labelledby="friend-board-dialog-title">
+        <header class="friend-board-header">
+          <div>
+            <p class="eyebrow">朋友留言版</p>
+            <h2 id="friend-board-dialog-title">给好奇的信</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-friend-board aria-label="关闭朋友留言版">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+          </button>
+        </header>
+        <div class="friend-board-layout">
+          <nav class="friend-tabs" id="friend-tabs" aria-label="选择朋友"></nav>
+          <article class="friend-letter" aria-live="polite">
+            <p class="friend-letter-from" id="friend-letter-from"></p>
+            <h3 id="friend-letter-title"></h3>
+            <div class="friend-letter-body" id="friend-letter-body"></div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <script src="./app.js?v=3"></script>
+  </body>
+</html>

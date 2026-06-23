@@ -49,6 +49,18 @@ body {
   color: var(--ink);
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  height: max(112px, calc(env(safe-area-inset-bottom) + 32px));
+  background: var(--paper);
+  pointer-events: none;
+}
+
 button,
 input,
 select,
@@ -1599,6 +1611,11 @@ input[type="range"] {
 
 body.sim-focused {
   overflow-y: auto;
+}
+
+body.sim-focused::after,
+body.game-running::after {
+  transform: translateY(100%);
 }
 
 body.sim-focused .phone-shell {
